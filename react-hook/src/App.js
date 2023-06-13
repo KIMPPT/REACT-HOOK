@@ -1,6 +1,9 @@
 import logo from "./logo.svg";
 import "./App.css";
 import { useCallback, useMemo, useState } from "react";
+import StatusBar from "./components/StatusBar";
+import SaveButton from "./components/SaveButton";
+import Inputbox from "./components/Inputbox";
 function App() {
   /*onchange와 연결되어 있는 값은 바로 사용하기보단 : 연결된 값은 언제든지 변경됨
   완전히 결정되었을 때 사용하는 값을 따로 두어서 쓰기 : name*/
@@ -59,6 +62,11 @@ function App() {
       <button onClick={onClick}>확인</button>
       <p>이름의 길이 : {memoCountName}</p>
       <p>{memotakeWord}</p>
+      <hr/>
+      <StatusBar/>
+      <SaveButton/>
+      <hr/>
+      <Inputbox/>
     </div>
   );
 }
